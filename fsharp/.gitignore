@@ -1,0 +1,8 @@
+**/.config
+**/.exercism
+**/bin
+**/obj
+**/Folder.DotSettings.user
+**/.idea
+**/.ionide
+.idea
