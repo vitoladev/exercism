@@ -10,17 +10,13 @@ defmodule RnaTranscription do
   @spec to_rna([char]) :: [char]
   def to_rna(dna) do
     dna
-    |> Enum.map(fn c ->
-      char = List.to_string([c])
-
-      cond do
-        char === "G" -> "C"
-        char === "C" -> "G"
-        char === "T" -> "A"
-        char === "A" -> "U"
+    |> Enum.map(fn char ->
+      case char do
+        ?G -> ?C
+        ?C -> ?G
+        ?T -> ?A
+        ?A -> ?U
       end
     end)
-    |> Enum.join("")
-    |> String.to_charlist()
   end
 end
